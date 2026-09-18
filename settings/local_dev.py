@@ -51,6 +51,15 @@ EXPOSE_PROMETHEUS_METRICS = True
 COMPRESS_ENABLED = False
 AXES_ENABLED = False
 
+STORAGES = {
+    'default': {
+        'BACKEND': 'django.core.files.storage.FileSystemStorage',
+    },
+    'staticfiles': {
+        'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage',
+    },
+}
+
 
 # Does not really cache anything
 CACHES_DUMMY = {
